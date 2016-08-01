@@ -100,16 +100,16 @@ def test_vector_multiply():
     assert vector_multiply(m, 2) == [6, 8]
 
 
-def test_vector_mean():
-    """
-    mean([a b], [c d]) = [mean(a, c) mean(b, d)]
-    mean(Vector)       = Vector
-    """
-    assert vector_mean(m, n) == [4, 2]
-    assert vector_mean(v, w) == [0.5, 2.5, 2]
-    assert are_equal(vector_mean(v, w, u)[0], 2 / 3)
-    assert are_equal(vector_mean(v, w, u)[1], 2)
-    assert are_equal(vector_mean(v, w, u)[2], 5 / 3)
+# def test_vector_mean():
+#     """
+#     mean([a b], [c d]) = [mean(a, c) mean(b, d)]
+#     mean(Vector)       = Vector
+#     """
+#     assert vector_mean(m, n) == [4, 2]
+#     assert vector_mean(v, w) == [0.5, 2.5, 2]
+#     assert are_equal(vector_mean(v, w, u)[0], 2 / 3)
+#     assert are_equal(vector_mean(v, w, u)[1], 2)
+#     assert are_equal(vector_mean(v, w, u)[2], 5 / 3)
 
 
 def test_magnitude():

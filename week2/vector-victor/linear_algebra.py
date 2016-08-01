@@ -1,6 +1,8 @@
 class ShapeError(Exception):
     pass
 
+from functools import reduce
+
 
 def ensure_same_shape(*values):
     if len({shape(value) for value in values}) != 1:
@@ -28,7 +30,8 @@ def vector_sub(vector_a, vector_b):
 
 def vector_sum(*vectors):
     ensure_same_shape(*vectors)
-    return [sum(v) for v in zip(*vectors)]
+    # return [sum(v) for v in zip(*vectors)]
+    return reduce(vector_add, vectors)
 
 
 def dot(vector_a, vector_b):
